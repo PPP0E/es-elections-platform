@@ -1,0 +1,15 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: rgb(20, 20, 20);
+}
+
+.logo {
+  position: relative;
+  width: 200px;
+  height: 53.19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
