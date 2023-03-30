@@ -5,12 +5,12 @@ import style from "@/styles/candidates.module.css";
 import { Fragment } from "react";
 
 const candidates = [
-	{ name: "Berzan Ozejder", type: "b", img: "https://bit.ly/sage-adebayo", slug: "berzan" },
-	{ name: "George-Alexander Tornaritis", type: "b", img: "https://bit.ly/sage-adebayo", slug: "tornaritis" },
-	{ name: "Philemon Antoniou", type: "b", img: "https://bit.ly/sage-adebayo", slug: "philios" },
-	{ name: "Marisa Troulllidou", type: "g", img: "https://bit.ly/sage-adebayo", slug: "marisa" },
-	{ name: "Louissa Maria Maroudia", type: "g", img: "https://bit.ly/sage-adebayo", slug: "louissa" },
-	{ name: "Tatiana Papadopoulou", type: "g", img: "https://bit.ly/sage-adebayo", slug: "tatiana" },
+	{ name: "Berzan Ozejder", type: "b", slug: "berzan" },
+	{ name: "Georgios Alexander Tornaritis", type: "b", slug: "tornaritis" },
+	{ name: "Philemon Antoniou", type: "b", slug: "philios" },
+	{ name: "Marisa Troullidou", type: "g", slug: "marisa" },
+	{ name: "Louissa Maria Maroudia", type: "g", slug: "louissa" },
+	{ name: "Tatiana Papadopoulou", type: "g", slug: "tatiana" },
 ];
 
 const girls = candidates.filter((candidate) => candidate.type == "g").sort((a, b) => (a.name > b.name ? 1 : -1));
@@ -27,7 +27,7 @@ export default function Candidates() {
 					HEAD GIRL CANDIDATES
 				</Text>
 				{girls.map((candidate) => {
-					return <Card name={candidate.name} type={candidate.type} img={candidate.img} slug={candidate.slug} />;
+					return <Card key={candidate.slug} name={candidate.name} type={candidate.type} img={candidate.img} slug={candidate.slug} />;
 				})}
 			</div>
 			<div className={style.page2}>
@@ -35,7 +35,7 @@ export default function Candidates() {
 					HEAD BOY CANDIDATES
 				</Text>
 				{boys.map((candidate) => {
-					return <Card name={candidate.name} type={candidate.type} img={candidate.img} slug={candidate.slug} />;
+					return <Card key={candidate.slug} name={candidate.name} type={candidate.type} img={candidate.img} slug={candidate.slug} />;
 				})}
 			</div>
 		</div>

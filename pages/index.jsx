@@ -3,14 +3,16 @@ import Image from "next/image";
 import { Fragment } from "react";
 import style from "@/styles/index.module.css";
 import { useRouter } from "next/router";
+import { Spacer } from "@nextui-org/react";
 
 export default function page() {
 	const router = useRouter();
 	return (
 		<div className={style.page}>
 			<div className={style.everyone}>
-				<Image src="/attributes/images/everyone.jpg" width={2048} height={1536} />
+				<Image alt="Photograph of all candidates together" src="/attributes/images/everyone.jpg" width={2048} height={1536} />
 			</div>
+			<Spacer y={1} />
 			<Button onClick={() => router.push("/candidates")} colorScheme="blue">
 				See Candidates 🚀
 			</Button>

@@ -43,9 +43,9 @@ function PageFooter() {
 					<Text onClick={() => window.open("#", "_blank")}>Twitter</Text>
 				</div>
 				<div className={style.logo}>
-					<Image src="/attributes/logos/ES-LOGO-WHITE.svg" fill />
+					<Image alt="The English School logo" src="/attributes/logos/ES-LOGO-WHITE.svg" fill />
 				</div>
-				<div>© 1900 - {currentYear} The English School. All Rights reserved.</div>
+				<div>© 1900 - {currentYear} The English School.</div>
 			</div>
 		</footer>
 	);
