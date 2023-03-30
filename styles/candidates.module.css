@@ -1,0 +1,32 @@
+.page1 {
+  margin-top: 10px !important;
+  margin-bottom: 5px !important;
+}
+
+.page2 {
+  margin-top: 5px !important;
+  margin-bottom: 10px !important;
+}
+
+.page1,
+.page2 {
+  background: #fff;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: middle;
+  height: auto;
+  width: 100%;
+}
+
+.outer {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  height: 1calc(100vh - 53.2px);
+  width: 100vw;
+  padding: 10px;
+}

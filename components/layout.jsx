@@ -36,7 +36,6 @@ export default function Layout({ children }) {
 						</Navbar.Link>
 					</Navbar.Content>
 				</Navbar>
-				<h1>Home</h1>
 				{children}
 			</div>
 			<PageFooter />

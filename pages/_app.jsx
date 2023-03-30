@@ -4,13 +4,13 @@ import { SSRProvider } from "@react-aria/ssr";
 import { ChakraProvider } from "@chakra-ui/react";
 function MyApp({ Component, pageProps }) {
 	return (
-		<ChakraProvider>
-			<SSRProvider>
+		<SSRProvider>
+			<ChakraProvider>
 				<Layout>
 					<Component {...pageProps} />
 				</Layout>
-			</SSRProvider>
-		</ChakraProvider>
+			</ChakraProvider>
+		</SSRProvider>
 	);
 }
 
