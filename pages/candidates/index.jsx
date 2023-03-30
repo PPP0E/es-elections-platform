@@ -23,16 +23,16 @@ export default function Candidates() {
 				<strong>All Candidates</strong> in Alphabetical order
 			</Text>
 			<div className={style.page1}>
-				<Text ml={3} fontWeight="700" fontSize="20px" color="black">
-					Head Girl Candidates
+				<Text ml={4} fontWeight="400" fontSize="20px" color="black">
+					HEAD GIRL CANDIDATES
 				</Text>
 				{girls.map((candidate) => {
 					return <Card name={candidate.name} type={candidate.type} img={candidate.img} slug={candidate.slug} />;
 				})}
 			</div>
 			<div className={style.page2}>
-				<Text ml={3} fontWeight="700" fontSize="20px" color="black">
-					Head Boy Candidates
+				<Text ml={4} fontWeight="400" fontSize="20px" color="black">
+					HEAD BOY CANDIDATES
 				</Text>
 				{boys.map((candidate) => {
 					return <Card name={candidate.name} type={candidate.type} img={candidate.img} slug={candidate.slug} />;

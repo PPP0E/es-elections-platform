@@ -1,7 +1,9 @@
-import { Flex, Avatar, Box, Text, Badge } from "@chakra-ui/react";
+import { Flex, Avatar, Box, Text, Badge, Button } from "@chakra-ui/react";
 import style from "./card.module.css";
+import { useRouter } from "next/router";
 
 export default function Card(props) {
+	const router = useRouter();
 	if (props.type == "b") {
 		return (
 			<Flex className={style.card}>
@@ -10,6 +12,9 @@ export default function Card(props) {
 					<Text fontWeight="bold">{props.name || "Name Surname"}</Text>
 					<Badge colorScheme="blue">HEAD BOY CANDIDATE</Badge>
 				</Box>
+				<Button onClick={() => router.push(`/candidates/${props.slug}`)} mt="auto" mb="auto" ml="auto">
+					Explore
+				</Button>
 			</Flex>
 		);
 	}
@@ -21,6 +26,9 @@ export default function Card(props) {
 					<Text fontWeight="bold">{props.name || "Name Surname"}</Text>
 					<Badge colorScheme="pink">HEAD GIRL CANDIDATE</Badge>
 				</Box>
+				<Button onClick={() => router.push(`/candidates/${props.slug}`)} mt="auto" mb="auto" ml="auto">
+					Explore
+				</Button>
 			</Flex>
 		);
 	}

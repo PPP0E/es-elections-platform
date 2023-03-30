@@ -10,11 +10,11 @@
 
 .page1,
 .page2 {
-  background: #fff;
+  background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
   padding: 20px;
   margin: 10px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   align-items: center;
   justify-content: middle;
   height: auto;
@@ -26,7 +26,7 @@
   flex-direction: column;
   justify-content: top;
   align-items: center;
-  height: 1calc(100vh - 53.2px);
+  height: calc(100vh - 53.19px);
   width: 100vw;
   padding: 10px;
 }
