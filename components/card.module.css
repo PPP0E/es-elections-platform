@@ -5,3 +5,19 @@
   padding: 16px;
   margin: 16px;
 }
+
+
+
+
+@media (max-width: 769px) {
+  .card {
+    display: grid !important;
+    grid-template-columns: 70px auto;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .button {
+    min-width: 100% !important;
+    grid-column: 1/-1;
+  }
+}

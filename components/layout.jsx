@@ -19,7 +19,9 @@ export default function Layout({ children }) {
 					isCompact>
 					<Navbar.Brand>
 						<div className={style.logo}>
-							<Image src="/attributes/logos/ES-LOGO.svg" fill />
+							<Link href="/">
+								<Image src="/attributes/logos/ES-LOGO.svg" fill />
+							</Link>
 						</div>
 						<Spacer x={0.5} />
 						<Text color="black" h3>

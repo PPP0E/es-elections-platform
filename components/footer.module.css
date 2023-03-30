@@ -42,14 +42,63 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  width: 100%;
-  height: 53.19px;
-  z-index: 0;
+  position: relative;
+  min-width: 70%;
+  min-height: 80%;
+  margin: auto;
+
+}
+
+.bottomText {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 60px;
+  color: #ffffff;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 0.9rem;
+}
+
+.bottomText>* {
+  grid-column: 1fr;
+  grid-row: 1fr;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  font-size: 0.8rem;
+
+}
+
+.bottomText>*:nth-child(1) {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
-.bottomText {
+
+.bottomText>*:nth-child(3) {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bottomText>*:nth-child(1)>* {
+  background-color: #464646;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+  border-radius: 50px;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 0.8rem;
+  transition-duration: 1.5s;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* .bottomText {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -61,8 +110,9 @@
   position: absolute;
   width: 100%;
   font-size: 0.9rem;
-}
+} */
 
+/* 
 .bottomText>*:nth-child(1) {
   display: flex;
   flex-direction: row;
@@ -86,9 +136,9 @@
   -ms-user-select: none;
   user-select: none;
   font-size: 0.8rem;
-}
+} */
 
-.bottomText>*:nth-child(1)>*:hover {
+/* .bottomText>*:nth-child(1)>*:hover {
   background-color: #ffffff;
   color: #000000;
   transition-duration: 0s;
@@ -99,14 +149,38 @@
 }
 
 .bottomText>*:nth-child(1)>* {
-  cursor: pointer;
   font-size: 0.9rem;
+} */
+
+.bottomText>*:nth-child(1)>*:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transition-duration: 0s;
 }
 
 @media (max-width: 1070px) {
   .sitemap {
     grid-template-columns: 1fr;
     height: 750px;
+  }
+
+  .bottomText>*:nth-child(2) {
+    order: -1;
+  }
+
+  .bottomText {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 150px;
+    margin-bottom: 100px;
+  }
+
+  .bottomText>* {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    grid-column: 1fr;
+    grid-row: 1fr;
   }
 
   .sitemsp,
@@ -120,6 +194,11 @@
     justify-content: center;
     align-items: center;
     padding-top: 3rem
+  }
+
+  .logo {
+    min-width: 70%;
+    min-height: 50%;
   }
 
   .bottomText>* {

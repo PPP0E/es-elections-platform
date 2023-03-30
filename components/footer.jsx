@@ -35,9 +35,6 @@ function PageFooter() {
 					<Text>Development</Text>
 				</div>
 			</div>
-			<div className={style.logo}>
-				<Image src="/attributes/logos/ES-LOGO-WHITE.svg" fill />
-			</div>
 			<div className={style.bottomText}>
 				<div>
 					<Text onClick={() => window.open("https://facebook.com/medimun", "_blank")}>FaceBook</Text>
@@ -45,7 +42,10 @@ function PageFooter() {
 					<Text onClick={() => window.open("https://www.youtube.com/@medimun8808", "_blank")}>YouTube</Text>
 					<Text onClick={() => window.open("#", "_blank")}>Twitter</Text>
 				</div>
-				<div>© 1900 - {currentYear} The English School, All Rights Reserved.</div>
+				<div className={style.logo}>
+					<Image src="/attributes/logos/ES-LOGO-WHITE.svg" fill />
+				</div>
+				<div>© 1900 - {currentYear} The English School. All Rights reserved.</div>
 			</div>
 		</footer>
 	);

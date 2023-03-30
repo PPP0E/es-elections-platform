@@ -7,12 +7,12 @@ export default function Card(props) {
 	if (props.type == "b") {
 		return (
 			<Flex className={style.card}>
-				<Avatar width="60px" height="60px" src="https://bit.ly/sage-adebayo" />
+				<Avatar width="60px" height="60px" src={`/attributes/candidates/${props.slug}.jpg`} />
 				<Box ml="3">
 					<Text fontWeight="bold">{props.name || "Name Surname"}</Text>
-					<Badge colorScheme="blue">HEAD BOY CANDIDATE</Badge>
+					<Badge colorScheme="green">HEAD BOY CANDIDATE</Badge>
 				</Box>
-				<Button onClick={() => router.push(`/candidates/${props.slug}`)} mt="auto" mb="auto" ml="auto">
+				<Button className={style.button} onClick={() => router.push(`/candidates/${props.slug}`)} mt="auto" mb="auto" ml="auto">
 					Explore
 				</Button>
 			</Flex>
@@ -21,12 +21,12 @@ export default function Card(props) {
 	if (props.type == "g") {
 		return (
 			<Flex className={style.card}>
-				<Avatar width="60px" height="60px" src="https://bit.ly/sage-adebayo" />
+				<Avatar width="60px" height="60px" src={`/attributes/candidates/${props.slug}.jpg`} />
 				<Box ml="3">
 					<Text fontWeight="bold">{props.name || "Name Surname"}</Text>
-					<Badge colorScheme="pink">HEAD GIRL CANDIDATE</Badge>
+					<Badge colorScheme="yellow">HEAD GIRL CANDIDATE</Badge>
 				</Box>
-				<Button onClick={() => router.push(`/candidates/${props.slug}`)} mt="auto" mb="auto" ml="auto">
+				<Button className={style.button} onClick={() => router.push(`/candidates/${props.slug}`)} mt="auto" mb="auto" ml="auto">
 					Explore
 				</Button>
 			</Flex>
