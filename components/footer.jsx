@@ -27,25 +27,25 @@ function PageFooter() {
 				</div>
 				<div>
 					<Text fontSize="18.51px" color="white">
-						Get In Touch
+						Other Services
 					</Text>
-					<Text>Contact Us</Text>
-					<Text>School Registeration</Text>
-					<Text>Create an Account</Text>
-					<Text>Development</Text>
+					<Text>School Website</Text>
+					<Text>Weduc Portal</Text>
+					<Text>Microsoft 365</Text>
+					<Text>MEDIMUN</Text>
 				</div>
 			</div>
 			<div className={style.bottomText}>
 				<div>
-					<Text onClick={() => window.open("https://facebook.com/medimun", "_blank")}>FaceBook</Text>
-					<Text onClick={() => window.open("https://instagram.com/medimun.cy", "_blank")}>Instagram</Text>
-					<Text onClick={() => window.open("https://www.youtube.com/@medimun8808", "_blank")}>YouTube</Text>
-					<Text onClick={() => window.open("#", "_blank")}>Twitter</Text>
+					<Text onClick={() => window.open("https://www.facebook.com/TheEnglishSchoolNicosia/", "_blank")}>FaceBook</Text>
+					<Text onClick={() => window.open("https://www.instagram.com/the_english_school_es/", "_blank")}>Instagram</Text>
+					<Text onClick={() => window.open("https://www.youtube.com/channel/UCpSVVX__wHimCxyWA9_8WhA", "_blank")}>YouTube</Text>
+					<Text onClick={() => window.open("https://twitter.com/escyprus", "_blank")}>Twitter</Text>
 				</div>
 				<div className={style.logo}>
 					<Image alt="The English School logo" src="/attributes/logos/ES-LOGO-WHITE.svg" fill />
 				</div>
-				<div>© 1900 - {currentYear} The English School.</div>
+				<div>© 1900 - {currentYear} The English School</div>
 			</div>
 		</footer>
 	);

@@ -29,8 +29,6 @@ export default function Candidates() {
 				{girls.map((candidate) => {
 					return <Card key={candidate.slug} name={candidate.name} type={candidate.type} img={candidate.img} slug={candidate.slug} />;
 				})}
-			</div>
-			<div className={style.page2}>
 				<Text ml={4} fontWeight="400" fontSize="20px" color="black">
 					HEAD BOY CANDIDATES
 				</Text>
