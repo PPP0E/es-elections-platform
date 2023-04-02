@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 export default function Card(props) {
 	const router = useRouter();
-	if (props.type == "b") {
+	if (props.type == "boy") {
 		return (
 			<Flex className={style.card}>
 				<Avatar width="60px" height="60px" src={`/attributes/candidates/${props.slug}.jpg`} />
@@ -18,7 +18,7 @@ export default function Card(props) {
 			</Flex>
 		);
 	}
-	if (props.type == "g") {
+	if (props.type == "girl") {
 		return (
 			<Flex className={style.card}>
 				<Avatar width="60px" height="60px" src={`/attributes/candidates/${props.slug}.jpg`} />

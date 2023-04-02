@@ -3,22 +3,26 @@ import Layout from "@/components/layout";
 import { Badge, Avatar, Flex, Box, Text } from "@chakra-ui/react";
 import style from "@/styles/candidates.module.css";
 import { Fragment } from "react";
+import Head from "next/head";
 
 const candidates = [
-	{ name: "Berzan Ozejder", type: "b", slug: "berzan" },
-	{ name: "Georgios Alexander Tornaritis", type: "b", slug: "tornaritis" },
-	{ name: "Philemon Antoniou", type: "b", slug: "philios" },
-	{ name: "Marisa Troullidou", type: "g", slug: "marisa" },
-	{ name: "Louissa Maria Maroudia", type: "g", slug: "louissa" },
-	{ name: "Tatiana Papadopoulou", type: "g", slug: "tatiana" },
+	{ name: "Berzan Ozejder", type: "boy", slug: "berzan" },
+	{ name: "Georgios Alexander Tornaritis", type: "boy", slug: "george" },
+	{ name: "Philemon Antoniou", type: "boy", slug: "philemon" },
+	{ name: "Marisa Troullidou", type: "girl", slug: "marisa" },
+	{ name: "Louissa Maria Maroudia", type: "girl", slug: "louissa" },
+	{ name: "Tatiana Papadopoulou", type: "girl", slug: "tatiana" },
 ];
 
-const girls = candidates.filter((candidate) => candidate.type == "g").sort((a, b) => (a.name > b.name ? 1 : -1));
-const boys = candidates.filter((candidate) => candidate.type == "b").sort((a, b) => (a.name > b.name ? 1 : -1));
+const girls = candidates.filter((candidate) => candidate.type == "girl").sort((a, b) => (a.name.split(" ").slice(-1).join(" ") > b.name.split(" ").slice(-1).join(" ") ? 1 : -1));
+const boys = candidates.filter((candidate) => candidate.type == "boy").sort((a, b) => (a.name.split(" ").slice(-1).join(" ") > b.name.split(" ").slice(-1).join(" ") ? 1 : -1));
 
 export default function Candidates() {
 	return (
 		<div className={style.outer}>
+			<Head>
+				<title>All Candidates | ES Student Elections</title>
+			</Head>
 			<Text>
 				<strong>All Candidates</strong> in Alphabetical order
 			</Text>

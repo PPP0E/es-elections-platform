@@ -29,7 +29,7 @@ export default function Layout({ children }) {
 					}}
 					maxWidth="fluid"
 					isCompact>
-					<Navbar.Brand css={{ cursor: "pointer" }}>
+					<Navbar.Brand>
 						<div className={style.logo}>
 							<Link
 								onClick={() => {
@@ -39,7 +39,7 @@ export default function Layout({ children }) {
 							</Link>
 						</div>
 						<Spacer x={0.5} />
-						<TextChakra boxShadow="0 0 4px rgba(0, 0, 0, 0.75) inset" backgroundColor="#FFFFFF" padding={1} pl={3} pr={3} borderRadius="50px" color="black" h3>
+						<TextChakra className={style.title} h3>
 							Student Elections
 						</TextChakra>
 					</Navbar.Brand>

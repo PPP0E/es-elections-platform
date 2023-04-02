@@ -16,4 +16,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+
+.title {
+  color: black !important;
+  padding: 4px;
+  border-radius: 40px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
