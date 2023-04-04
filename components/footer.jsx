@@ -13,26 +13,26 @@ function PageFooter() {
 			<div className={style.sitemap}>
 				<div>
 					<Text>Website & App</Text>
-					<Text>The App</Text>
-					<Text>Create an Account</Text>
-					<Text>Development</Text>
-					<Text>Our Technologies</Text>
+					<Text>Home Page</Text>
+					<Text>All Candidates</Text>
+					<Text>Form TutorLogin</Text>
+					<Text>All Speeches</Text>
 				</div>
 				<div>
-					<Text>Website & App</Text>
-					<Text>The App</Text>
-					<Text>Create an Account</Text>
-					<Text>Development</Text>
-					<Text>Our Technologies</Text>
+					<Text>The School</Text>
+					<Text>Elections</Text>
+					<Text>History</Text>
+					<Text>Information</Text>
+					<Text>Contact Us</Text>
 				</div>
 				<div>
 					<Text fontSize="18.51px" color="white">
 						Other Services
 					</Text>
-					<Text>School Website</Text>
-					<Text>Weduc Portal</Text>
-					<Text>Microsoft 365</Text>
-					<Text>MEDIMUN</Text>
+					<Text onClick={() => window.open("https://englishschool.ac.cy", "_blank")}>School Website</Text>
+					<Text onClick={() => window.open("https://app.weduc.co.uk", "_blank")}>Weduc Portal</Text>
+					<Text onClick={() => window.open("https://login.microsoftonline.com/?whr=englishschool.ac.cy", "_blank")}>Microsoft 365</Text>
+					<Text onClick={() => window.open("https://medimun.org", "_blank")}>MEDIMUN</Text>
 				</div>
 			</div>
 			<div className={style.bottomText}>

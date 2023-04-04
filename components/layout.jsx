@@ -5,17 +5,21 @@ import Image from "next/image";
 import PageFooter from "@/components/footer";
 import { Fragment, useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import { getSession, signOut, useSession } from "next-auth/react";
 
 export default function Layout({ children }) {
 	const [isCandidate, setIsCandidate] = useState(false);
 	const [isVoting, setIsVoting] = useState(false);
 	const router = useRouter();
+	const { data: session, status } = useSession();
 
 	useEffect(() => {
 		const currentUrl = window.location.href;
 		setIsCandidate(currentUrl.includes("candidates"));
 		setIsVoting(currentUrl.includes("voting"));
 	}, [router]);
+
+	console.log(session);
 
 	return (
 		<Fragment>
@@ -50,6 +54,7 @@ export default function Layout({ children }) {
 						<Navbar.Link isActive={isVoting} css={{ cursor: "pointer" }} onPress={() => router.push("/voting")}>
 							Voting Procedure
 						</Navbar.Link>
+						{!session ? <ButtonChakra onClick={() => router.push("/login")}>Form Tutor Login</ButtonChakra> : <ButtonChakra onClick={() => signOut()}>Log Out</ButtonChakra>}
 					</Navbar.Content>
 					<Navbar.Toggle showIn="xs" aria-label="toggle navigation" />
 					<Navbar.Collapse>
@@ -63,6 +68,7 @@ export default function Layout({ children }) {
 								Voting Procedure
 							</Link>
 						</Navbar.CollapseItem>
+						<Navbar.CollapseItem>{!session ? <ButtonChakra onClick={() => router.push("/login")}>Form Tutor Login</ButtonChakra> : <ButtonChakra onClick={() => signOut()}>Log Out</ButtonChakra>}</Navbar.CollapseItem>
 					</Navbar.Collapse>
 				</Navbar>
 				{children}
