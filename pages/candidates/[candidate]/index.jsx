@@ -54,8 +54,8 @@ export default function page(props) {
 				<div className={style.application}>
 					<GrTextAlignFull className={style.textIcon} />
 					Read my application
-					<Button isDisabled ml="auto">
-						Not Yet Available
+					<Button onClick={() => router.push(`/applications/${candidate}.pdf`)} ml="auto">
+						Read
 					</Button>
 				</div>
 				{props.candidate.website && (
@@ -72,8 +72,8 @@ export default function page(props) {
 	);
 }
 
-export async function getServerSideProps(context) {
-	const candidate = context.query.candidate;
+export async function getStaticProps({ params }) {
+	const candidate = params.candidate;
 
 	const candidateInfo = await prisma.candidate.findFirst({
 		where: {
@@ -96,5 +96,13 @@ export async function getServerSideProps(context) {
 				facebook: candidateInfo.facebook,
 			},
 		},
+		revalidate: 1200,
+	};
+}
+
+export async function getStaticPaths() {
+	return {
+		paths: [{ params: { candidate: "berzan" } }, { params: { candidate: "marisa" } }, { params: { candidate: "louissa" } }, { params: { candidate: "tatiana" } }, { params: { candidate: "george" } }, { params: { candidate: "philemon" } }],
+		fallback: false, // can also be true or 'blocking'
 	};
 }
