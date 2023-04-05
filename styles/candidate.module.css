@@ -46,6 +46,8 @@
   transition-duration: 0.5s;
   display: none;
   background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
+  cursor: pointer;
+
 }
 
 .back:hover {
@@ -307,6 +309,7 @@
     width: 100%;
     padding-left: 15px;
     padding-right: 15px;
+    min-height: calc(100vh - 470px);
   }
 
 }
