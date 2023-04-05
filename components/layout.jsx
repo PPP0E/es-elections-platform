@@ -44,7 +44,7 @@ export default function Layout({ children }) {
 						</div>
 						<Spacer x={0.5} />
 						<TextChakra className={style.title} h3>
-							Student Elections
+							Elections
 						</TextChakra>
 					</Navbar.Brand>
 					<Navbar.Content hideIn="xs" variant="underline">

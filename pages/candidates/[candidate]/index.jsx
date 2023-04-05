@@ -19,6 +19,9 @@ export default function page(props) {
 			<div onClick={() => router.push("/candidates")} className={style.back}>
 				← All Candidates
 			</div>
+			<div onClick={() => router.push("/candidates")} className={style.backMobile}>
+				←
+			</div>
 			<Head>
 				<title>{`${props.candidate.name} | ES Student Elections`}</title>
 			</Head>

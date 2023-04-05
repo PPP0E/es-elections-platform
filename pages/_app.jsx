@@ -4,6 +4,7 @@ import { SSRProvider } from "@react-aria/ssr";
 import { ChakraProvider } from "@chakra-ui/react";
 import { NextUIProvider } from "@nextui-org/react";
 import { SessionProvider } from "next-auth/react";
+import { Analytics } from "@vercel/analytics/react";
 
 function MyApp({ Component, pageProps }) {
 	return (
@@ -12,6 +13,7 @@ function MyApp({ Component, pageProps }) {
 				<ChakraProvider>
 					<Layout>
 						<Component {...pageProps} />
+						<Analytics />
 					</Layout>
 				</ChakraProvider>
 			</SessionProvider>
