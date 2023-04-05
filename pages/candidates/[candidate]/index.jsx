@@ -61,7 +61,7 @@ export default function page(props) {
 				{props.candidate.website && (
 					<div className={style.website}>
 						<TbWorld className={style.textIcon} />
-						Website
+						Visit my website
 						<Button target="_blank" href={props.candidate.website} as={Link} ml="auto">
 							Visit
 						</Button>
