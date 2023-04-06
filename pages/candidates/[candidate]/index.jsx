@@ -62,7 +62,7 @@ export default function page(props) {
 					</Button>
 				</div>
 
-				{props.candidate.speech && <iframe allowFullScreen className={style.speech} src={`https://www.youtube.com/embed/${props.candidate.speech}?modestbranding=1&rel=0&showinfo=0`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>}
+				{props.candidate.speech && <iframe allowFullScreen className={style.speech} src={`https://www.youtube.com/embed/${props.candidate.speech}?modestbranding=1&rel=0&showinfo=0`} title="YouTube video player1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>}
 				{!props.candidate.speech && (
 					<div className={style.speech}>
 						<Text height="100%" borderRadius="15px" color="white" background="black" padding="5px">
