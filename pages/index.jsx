@@ -7,12 +7,10 @@ import { Spacer } from "@nextui-org/react";
 import Head from "next/head";
 import { Text } from "@chakra-ui/react";
 import Confetti from "react-confetti";
-import useWindowSize from "react-use/lib/useWindowSize";
-import { useState } from "react";
+import useWindowDimensions from "@/hooks/useWindowDimension";
 
 export default function page() {
-	const [screensize, setScreensize] = useState({ width: 1920, height: 1080 });
-	console.log(screensize);
+	const { width, height } = useWindowDimensions();
 
 	function winner(name, image, position) {
 		return (
@@ -30,20 +28,11 @@ export default function page() {
 		);
 	}
 
-	useEffect(() => {
-		const width = window.innerWidth;
-		const height = window.innerHeight;
-		if (width == "Infinity" || height == "Infinity") setScreensize({ width: 1920, height: 1080 });
-		else {
-			setScreensize({ width: window.innerWidth, height: window.innerHeight });
-		}
-	}, []);
-
 	const router = useRouter();
 
 	return (
 		<Fragment>
-			<Confetti width={screensize.width} height={screensize.height} />
+			{width && <Confetti width={width} height={height} />}
 
 			<Head>
 				<title>ES Student Elections</title>
@@ -51,15 +40,15 @@ export default function page() {
 			<div className={style.page}>
 				<div className={style.winners}>
 					<Text fontSize="20px" fontWeight="600">
-						Winners
+						Winners of the 2023 Elections
 					</Text>
 					{winner("Marisa Troullidou", "marisa", "Head Girl")}
 					{winner("Philemon Antoniou", "philemon", "Head Boy")}
 					{winner("Louissa Maria Maroudia", "louissa", "Deputy Head Girl")}
 					{winner("George Alexander Tornaritis", "george", "Deputy Head Boy")}
-
+					<Spacer y={1} />
 					<Button onClick={() => router.push("/candidates")} colorScheme="blue">
-						See All Candidates 🚀
+						See All Candidates
 					</Button>
 				</div>
 			</div>

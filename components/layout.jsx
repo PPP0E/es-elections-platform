@@ -22,7 +22,7 @@ export default function Layout({ children }) {
 	console.log(session);
 
 	return (
-		<Fragment>
+		<div className={style.allPage}>
 			<div className={style.layout}>
 				<Navbar
 					css={{
@@ -74,6 +74,6 @@ export default function Layout({ children }) {
 				{children}
 			</div>
 			<PageFooter />
-		</Fragment>
+		</div>
 	);
 }
