@@ -8,9 +8,11 @@ import Head from "next/head";
 import { Text } from "@chakra-ui/react";
 import Confetti from "react-confetti";
 import useWindowSize from "react-use/lib/useWindowSize";
+import { useState } from "react";
 
 export default function page() {
-	const { width, height } = useWindowSize();
+	const [screensize, setScreensize] = useState({ width: 1920, height: 1080 });
+	console.log(screensize);
 
 	function winner(name, image, position) {
 		return (
@@ -28,11 +30,20 @@ export default function page() {
 		);
 	}
 
+	useEffect(() => {
+		const width = window.innerWidth;
+		const height = window.innerHeight;
+		if (width == "Infinity" || height == "Infinity") setScreensize({ width: 1920, height: 1080 });
+		else {
+			setScreensize({ width: window.innerWidth, height: window.innerHeight });
+		}
+	}, []);
+
 	const router = useRouter();
 
 	return (
 		<Fragment>
-			<Confetti width={width} height={height} />
+			<Confetti width={screensize.width} height={screensize.height} />
 
 			<Head>
 				<title>ES Student Elections</title>
