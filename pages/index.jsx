@@ -1,22 +1,26 @@
 import { Avatar, Button } from "@chakra-ui/react";
 import Image from "next/image";
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import style from "@/styles/index.module.css";
 import { useRouter } from "next/router";
 import { Spacer } from "@nextui-org/react";
 import Head from "next/head";
 import { Text } from "@chakra-ui/react";
+import Confetti from "react-confetti";
+import useWindowSize from "react-use/lib/useWindowSize";
 
 export default function page() {
+	const { width, height } = useWindowSize();
+
 	function winner(name, image, position) {
 		return (
 			<div className={style.winner}>
 				<div style={{ backgroundImage: `url(/attributes/candidates/${image}.jpg)` }} className={style.left}></div>
 				<div className={style.right}>
-					<Text fontSize="20px" fontWeight="400">
+					<Text fontSize="17px" fontWeight="400">
 						{position}
 					</Text>
-					<Text fontSize="20px" fontWeight="600">
+					<Text fontSize="17px" fontWeight="600">
 						{name}
 					</Text>
 				</div>
@@ -25,8 +29,11 @@ export default function page() {
 	}
 
 	const router = useRouter();
+
 	return (
 		<Fragment>
+			<Confetti width={width} height={height} />
+
 			<Head>
 				<title>ES Student Elections</title>
 			</Head>
