@@ -3,7 +3,7 @@
 Welcome to the official and unbiased platform for The English School elections - [eselections.org](https://www.eselections.org)!
 
 ## Overview
-This platform was designed with transparency and fairness in mind, providing every candidate an equal opportunity to showcase their capabilities and vision. Not only does it serve as a digital campaign ground, but it also streamlines the voting process, ensuring each vote counts.
+This platform was designed with transparency and fairness in mind, providing every candidate an equal opportunity to showcase their capabilities and vision. Not only does it serve as a digital campaign ground, but it also streamlines the voting process, ensuring each vote counts. The part which runs the voting is not published for security reasons.
 
 ## Features
 - **Candidate Profiles**: An equal space for all candidates to advertise and showcase themselves.
